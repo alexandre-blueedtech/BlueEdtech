@@ -1,1 +1,0 @@
-https://blueedtech.gitbook.io/modulo-1-lap/1a-semana/aula-01-aula-variaveis-const-let-var-operadores-matematicos-e-console.log
