@@ -1,20 +1,88 @@
 console.clear();
 var prompt = require('prompt-sync')();
 
-let a = +prompt("Digite um valor para o lado a: ")
-let b = +prompt("Digite um valor para o lado b: ")
-let c = +prompt("Digite um valor para o lado c: ")
+const prompt = require("prompt-sync")();
 
-if( a >= b + c){
-    console.log("NAO FORMA TRIANGULO")
-} else if (a == b + c){
-    console.log("TRIANGULO RETANGULO")
-} else if (a > b + c){
-    console.log("TRIANGULO OBTUSANGULO")
-} else if (a < b + c){
-    console.log("TRIANGULO ACUTANGULO")
-} else if (a == b && b == c && a==c){
-    console.log("TRIANGULO EQUILATERO")
-} else if (a == b || b == c || c == a){
-    console.log("TRIANGULO ISÓCELES")
+let A = +prompt("Digite o valor para o lado 1: ");
+let B = +prompt("Digite o valor para o lado 2: ");
+let C = +prompt("Digite o valor para o lado 3: ");
+let X = 0;
+
+console.log();
+console.log("----- LADOS -----");
+console.log(`A: ${A} | B: ${B} | C: ${C}`);
+console.log("-----------------");
+console.log();
+
+if (A < B){
+    console.log(`X: ${X} | A: ${A} | B: ${B}`);
+    X = A;
+    console.log(`X: ${X} | A: ${A} | B: ${B}`);
+    A = B;
+    console.log(`X: ${X} | A: ${A} | B: ${B}`);
+    B = X;
+    console.log(`X: ${X} | A: ${A} | B: ${B}`);
+}
+
+console.log();
+console.log("----- LADOS -----");
+console.log(`A: ${A} | B: ${B} | C: ${C}`);
+console.log("-----------------");
+console.log();
+
+if (B < C){
+    X = B;
+    console.log(`X: ${X} | B: ${B} | C: ${C}`);
+    B = C;
+    console.log(`X: ${X} | B: ${B} | C: ${C}`);
+    C = X;
+    console.log(`X: ${X} | B: ${B} | C: ${C}`);
+}
+
+console.log();
+console.log("----- LADOS -----");
+console.log(`A: ${A} | B: ${B} | C: ${C}`);
+console.log("-----------------");
+console.log();
+
+if (A < B){
+    console.log(`X: ${X} | A: ${A} | B: ${B}`);
+    X = A;
+    console.log(`X: ${X} | A: ${A} | B: ${B}`);
+    A = B;
+    console.log(`X: ${X} | A: ${A} | B: ${B}`);
+    B = X;
+    console.log(`X: ${X} | A: ${A} | B: ${B}`);
+}
+
+console.log();
+console.log("----- LADOS -----");
+console.log(`A: ${A} | B: ${B} | C: ${C}`);
+console.log("-----------------");
+console.log();
+
+if (A >= (B + C)){
+    console.log("NAO FORMA TRIANGULO");
+}
+else{
+    if ( (A*A) == (B*B) + (C*C) )
+    {
+        console.log("TRIANGULO RETANGULO");
+    }
+    if ( (A*A) > (B*B) + (C*C) )
+    {
+        console.log("TRIANGULO OBTUSANGULO");
+    }
+    if ( (A*A) < (B*B) + (C*C) )
+    {
+        console.log("TRIANGULO ACUTANGULO");
+    }
+    if (A == B && B == C)
+    {
+        console.log("TRIANGULO EQUILATERO");
+    }
+    if ( (A == B && A != C) || (B == C && B != A))
+    {
+        console.log("TRIANGULO ISOSCELES");
+    }
 }
